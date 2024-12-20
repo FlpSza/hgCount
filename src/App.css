@@ -166,103 +166,57 @@ button:hover {
   color: #ff3399;
 }
 
-/* Ajustes para dispositivos móveis (menor que 768px) */
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-    background-position: center;
-    height: auto; /* Permite que a altura seja ajustada conforme o conteúdo */
-  }
-
-  .container {
-    padding: 10px;
-    height: auto; /* Ajusta a altura para o conteúdo */
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 2rem;
-    margin-bottom: -10px;
-  }
-
-  p {
-    font-size: 1.4rem;
-  }
-
-  .timer {
-    flex-direction: column; /* Muda a direção do contador de horizontal para vertical */
-    gap: 10px; /* Menor espaçamento entre os itens */
-  }
-
-  .timer div {
-    width: 60px; /* Reduz a largura das caixas */
-    height: 80px; /* Reduz a altura das caixas */
-    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
-    padding: 10px; /* Menos padding */
-  }
-
-  .timer div span:first-child {
-    font-size: 2rem; /* Ajusta o tamanho do número */
-  }
-
-  .colon {
-    font-size: 1.5rem; /* Reduz o tamanho dos dois pontos */
-    margin: 0 5px; /* Menor espaçamento entre os itens */
-  }
-
-  .actions {
-    flex-direction: column; /* Organiza os itens em coluna em telas pequenas */
-    align-items: center; /* Centraliza os itens */
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .actions img {
-    width: 200px; /* Ajusta a largura da imagem */
-    height: 80px; /* Ajusta a altura da imagem */
-  }
-
-  button {
-    font-size: 1.2rem; /* Ajusta o tamanho da fonte do botão */
-    padding: 8px 20px; /* Menos padding */
-  }
-
-  .social-icons {
-    flex-direction: column; /* Organiza os ícones de redes sociais em coluna */
-    gap: 10px;
-  }
-
-  .social-icons a {
-    font-size: 1.2rem; /* Ajusta o tamanho dos ícones */
-  }
-}
-
 /* Ajustes para dispositivos menores que 480px (smartphones) */
+/* Responsividade para dispositivos móveis (largura até 480px) */
 @media (max-width: 480px) {
-  .timer div {
-    width: 50px; /* Ajusta mais a largura das caixas */
-    height: 70px; /* Ajusta mais a altura das caixas */
-  }
 
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui o padding e borda no cálculo da largura */
+  }
+  /* Ajuste no título */
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Menor que o original para caber bem na tela */
+    margin-bottom: 1px; /* Um pouco de espaço abaixo */
   }
 
+  /* Ajuste no parágrafo */
   p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    margin-bottom: 10px; /* Espaço após o parágrafo */
   }
 
+  /* Ajuste no contador, garantindo que os itens se ajustem bem */
+  .timer {
+    display: flex; /* Flexbox para exibir os itens na mesma linha */
+    justify-content: center; /* Centraliza os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+
+  .timer div {
+    width: 50px; /* Largura ajustada para dispositivos pequenos */
+    height: 60px; /* Altura ajustada */
+    font-size: 1rem; /* Tamanho de fonte menor */
+  }
+
+  /* Ajustes nas imagens de ações */
   .actions img {
-    width: 180px; /* Ajusta mais a largura da imagem */
-    height: 70px; /* Ajusta mais a altura da imagem */
+    width: 180px; /* Reduz o tamanho das imagens */
+    height: 70px; /* Altura proporcional */
+    object-fit: contain; /* Garante que a imagem não distorça */
   }
 
+  /* Ajustes nos botões */
   button {
-    font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
-    padding: 8px 15px; /* Ajusta o padding */
+    font-size: 1rem; /* Menor que o original */
+    padding: 8px 15px; /* Ajusta o padding para o botão ficar proporcional */
   }
 
+  /* Ajustes nos ícones sociais */
   .social-icons a {
-    font-size: 1rem; /* Ajusta o tamanho dos ícones */
+    font-size: 1rem; /* Tamanho de fonte ajustado */
+    padding: 10px; /* Um pouco de padding para facilitar o toque */
   }
 }
