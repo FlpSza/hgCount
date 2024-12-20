@@ -169,54 +169,95 @@ button:hover {
 /* Ajustes para dispositivos menores que 480px (smartphones) */
 /* Responsividade para dispositivos móveis (largura até 480px) */
 @media (max-width: 480px) {
-
   html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Inclui o padding e borda no cálculo da largura */
+    height: 100%; /* Garante que o body ocupe 100% da altura da tela */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove padding */
+    overflow-x: hidden; /* Evita rolagem horizontal */
   }
+
+  .container {
+    padding-left: 1px; /* Adiciona um pouco de espaçamento à esquerda */
+    padding-right: 12px; /* Garante que também tenha espaçamento à direita */
+  }
+
+  /* Ajuste no fundo para cobrir toda a tela */
+  .background {
+    background-size: cover; /* O fundo cobre toda a tela */
+    background-position: center; /* Centraliza o fundo */
+    background-repeat: no-repeat; /* Evita a repetição do fundo */
+    width: 100%; /* Largura da tela */
+    height: 100vh; /* Altura da tela */
+  }
+
   /* Ajuste no título */
   h1 {
-    font-size: 1.2rem; /* Menor que o original para caber bem na tela */
-    margin-bottom: 1px; /* Um pouco de espaço abaixo */
+    width: 80%;
+    font-size: 2rem; /* Tamanho da fonte ajustado */
+    margin-bottom: 0.1rem; /* Menos margem para ajustar */
   }
 
-  /* Ajuste no parágrafo */
+  /* Ajuste nos parágrafos */
   p {
-    font-size: 1rem; /* Ajusta o tamanho do texto */
-    margin-bottom: 10px; /* Espaço após o parágrafo */
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    margin-bottom: 1rem; /* Ajusta o espaçamento entre parágrafos */
   }
 
-  /* Ajuste no contador, garantindo que os itens se ajustem bem */
+  .colon {
+    display: none; /* Remove o símbolo ":" */
+  }
+
+  .timer .time-box:nth-child(5), /* Seleciona o contador dos segundos */
+  .colon:nth-child(5) { /* Também oculta o ":" que está após os segundos */
+    display: none;
+  }
+
+  /* Ajuste para o contador (dias, horas, minutos) */
   .timer {
-    display: flex; /* Flexbox para exibir os itens na mesma linha */
-    justify-content: center; /* Centraliza os itens */
-    gap: 10px; /* Espaçamento entre os itens */
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Menos espaço entre os itens */
   }
 
-  .timer div {
-    width: 50px; /* Largura ajustada para dispositivos pequenos */
-    height: 60px; /* Altura ajustada */
-    font-size: 1rem; /* Tamanho de fonte menor */
+  .time-box {
+    font-size: 1rem; /* Fonte ajustada para caber melhor */
+    padding: 5px; /* Um pouco de padding para o contador */
+    width: auto; /* Ajusta o tamanho */
   }
 
-  /* Ajustes nas imagens de ações */
-  .actions img {
-    width: 180px; /* Reduz o tamanho das imagens */
-    height: 70px; /* Altura proporcional */
-    object-fit: contain; /* Garante que a imagem não distorça */
+  /* Alinhamento dos ícones de redes sociais em uma linha */
+  .social-icons {
+    display: flex; /* Flexbox para alinhar os ícones em linha */
+    justify-content: flex-start; /* Alinha à esquerda */
+    gap: 15px; /* Espaçamento entre os ícones */
+    margin-bottom: 1rem; /* Espaço abaixo dos ícones */
   }
 
-  /* Ajustes nos botões */
-  button {
-    font-size: 1rem; /* Menor que o original */
-    padding: 8px 15px; /* Ajusta o padding para o botão ficar proporcional */
-  }
-
-  /* Ajustes nos ícones sociais */
+  /* Ajustes para as redes sociais */
   .social-icons a {
-    font-size: 1rem; /* Tamanho de fonte ajustado */
-    padding: 10px; /* Um pouco de padding para facilitar o toque */
+    font-size: 1.2rem; /* Tamanho ajustado para links de redes sociais */
+    padding: 10px; /* Padding para facilitar o clique */
+  }
+
+  /* Ajustes nas imagens */
+  .actions {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 1rem; /* Espaço abaixo dos itens */
+  }
+
+  .actions img {
+    width: 120px; /* Menor para caber na tela */
+    height: auto; /* Altura automática para manter proporção */
+    object-fit: contain;
+    margin-bottom: 1rem; /* Espaço abaixo da imagem */
+  }
+
+  /* Ajuste nos botões */
+  button {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    padding: 8px 15px;
+    margin-bottom: 10px; /* Espaço abaixo do botão */
   }
 }
