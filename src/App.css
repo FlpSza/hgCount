@@ -1,0 +1,167 @@
+/* App.css */
+
+/* Define o fundo da página */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./img/background.jpg'); /* Corrigido o caminho da imagem */
+  background-size: cover; /* Faz a imagem cobrir a tela toda */
+  background-position: center; /* Centraliza a imagem */
+  position: relative; /* Para possibilitar o uso do ::before */
+  overflow: hidden; /* Garante que nada saia do corpo da tela */
+}
+
+/* Adiciona uma camada escura sobre a imagem de fundo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* A cor escura com transparência */
+  z-index: -1; /* Coloca a sobreposição abaixo do conteúdo */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  /* background: rgba(0, 0, 0, 0.7);  */
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  */
+  width: 100%; /* Faz com que a largura ocupe 100% da tela */
+  height: 94vh; /* Ajuste para a altura ocupar 94% da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: -20px;
+}
+
+/* Subtítulo */
+p {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.textos p {
+  margin: 10px; /* Remove a margem padrão dos parágrafos */
+}
+
+.textos p + p {
+  margin-top: 2px; 
+}
+
+
+/* Contador */
+/* Contador de tempo */
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Maior espaçamento entre os itens */
+  margin-bottom: 20px;
+}
+
+.timer div {
+  background: #ff007f; /* Cor de fundo rosa */
+  color: #fff; /* Cor do texto branco */
+  padding: 20px; /* Mais padding para aumentar o tamanho da caixa */
+  border-radius: 5px;
+  font-size: 1.5rem; /* Tamanho de fonte para a palavra */
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px; /* Largura fixa */
+  height: 100px; /* Altura fixa */
+  text-align: center;
+}
+
+.timer div span:first-child {
+  font-size: 2.5rem; /* Tamanho maior para o número */
+  font-weight: bold;
+}
+
+.timer div span:last-child {
+  font-size: 1rem; /* Tamanho menor para a palavra */
+  font-weight: normal;
+}
+
+.colon {
+  font-weight: bold; /* Deixa o texto em negrito */
+  font-size: 2rem; /* Tamanho maior para os dois pontos */
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Espaçamento entre os dois pontos e as caixas */
+}
+
+/* Estilo do bloco de botões e redes sociais na mesma linha */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Imagem pequena entre as redes sociais e o botão */
+.actions img {
+  width: 250px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Botão de cadastro */
+button {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  background-color: #fff; /* Fundo branco */
+  color: #E6007B; /* Texto rosa */
+  border: 1px solid #E6007B; /* Borda rosa */
+  padding: 10px 30px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Efeito de hover */
+button:hover {
+  background-color: #E6007B; /* Fundo rosa ao passar o mouse */
+  color: #fff; /* Texto branco ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+/* Ícones das redes sociais */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ff007f;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  width: 2.5rem;
+}
+
+.social-icons a:hover {
+  color: #ff3399;
+}
